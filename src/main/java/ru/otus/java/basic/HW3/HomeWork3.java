@@ -12,7 +12,7 @@ public class HomeWork3 {
         int[][] arr1 = {{-5, -4, -3, -2, -1, 0, 1, 2, 3}, {4, 5, 6, 7, 8, 9}};
         int[][] array1 = {{1, -5, 4, -6, 7, 3, 8, 97, -36}, null, {10, 4, 6, -46, -55, 68,}};
         System.out.println(sumOfPositiveElements(array1));
-        sqrtStar(new int[5][5]);
+        sqrtStar(10);
         diagonalInSqrt(new int[6][6]);
         System.out.println(findMax(arr1));
         System.out.println(sumRowOrColum(arr0));
@@ -35,11 +35,12 @@ public class HomeWork3 {
         return sumArr;
     }
 
-    public static void sqrtStar(int[][] size) {
-        for (int i = 0; i < size.length; i++) {
-            for (int j = 0; j < size[i].length; j++) {
-                size[i][j] = 1;
-                if (size[i][j] == 1) {
+    public static void sqrtStar(int size) {
+        int[][] array = new int[size][size];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = 1;
+                if (array[i][j] == 1) {
                     System.out.print("*" + "  ");
                 }
             }
